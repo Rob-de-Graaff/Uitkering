@@ -1,0 +1,33 @@
+(sii opdr 12, opdr 24)
+
+Class employee:interface
+String name
+Datetime dob
+Double salary
+Boolean married
+Double salaryLimitMin = 1300/1425 get/set
+Double benefit% = 0.0175
+Double benefitLimitMin = 250
+Void tostring()?(sii12)
+
+Class form
+Input listbox employees
+
+Int age = calcage(employee.dob)
+
+//Check conditions
+If(!employee.married && age<21)
+Interface.salarylimitmin=1300
+Else interface.salarylimitmin=1425
+
+//check if employee deserves benefit
+If(employee.salary<interface.salarylimitmin)
+{BenefitTotal=salary*12*benefit%
+Text="BenefitTotal=salary*12*benefit%"
+If(benefitTotal<employee.benefitlimitmin)
+BenefitTotal = employee.benefitlimitmin
+Text="BenefitTotal = employee.benefitlimitmin"
+}
+
+//Formula
+BenefitTotal=salary*12*benefit%
